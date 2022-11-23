@@ -14,9 +14,7 @@
       <change afterPath="$PROJECT_DIR$/../../Exercices/devetmoi/.idea/devetmoi.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../P2/.idea/P2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../P3/.idea/P3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/P5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/CalendarBundle-master/.idea/CalendarBundle-master.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/TheEvent/.idea/TheEvent.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/calendar-12/.idea/calendar-12.iml" afterDir="false" />
@@ -35,6 +33,15 @@
       <change beforePath="$PROJECT_DIR$/../../../ChrisLopez/style/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Copie de discord/Tchalakov_Christophe_P2_BOOKI_062022/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" beforeDir="false" afterPath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
+    </list>
+    <list id="4ec2b519-6e14-499b-b84d-ddf1330efde5" name="Changes by pown3d" comment="">
+      <change beforePath="$PROJECT_DIR$/front/html/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +52,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2H5qZmcqIQ0dW0ssANUXmWlJLGn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,9 +65,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.6" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.6" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -71,11 +86,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667585352006</updated>
-      <workItem from="1667585355654" duration="312000" />
+      <workItem from="1667585355654" duration="20912000" />
+      <workItem from="1667896667645" duration="69000" />
+      <workItem from="1667919696156" duration="4607000" />
+      <workItem from="1667993262399" duration="11378000" />
+      <workItem from="1668089310372" duration="3710000" />
+      <workItem from="1668180706844" duration="88907000" />
+      <workItem from="1669027317728" duration="2596000" />
+      <workItem from="1669042999162" duration="11440000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
