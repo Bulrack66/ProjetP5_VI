@@ -55,3 +55,5 @@ else {
             // AddeventListener to delete item in Array
         })
 }}
+const selectElement = document.querySelector('.itemQuantity');
+console.log(selectElement);

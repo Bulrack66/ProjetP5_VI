@@ -14,7 +14,6 @@
       <change afterPath="$PROJECT_DIR$/../../Exercices/devetmoi/.idea/devetmoi.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../P2/.idea/P2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../P3/.idea/P3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/CalendarBundle-master/.idea/CalendarBundle-master.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/TheEvent/.idea/TheEvent.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/calendar-12/.idea/calendar-12.iml" afterDir="false" />
@@ -33,16 +32,10 @@
       <change beforePath="$PROJECT_DIR$/../../../ChrisLopez/style/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Copie de discord/Tchalakov_Christophe_P2_BOOKI_062022/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" beforeDir="false" afterPath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
     </list>
-    <list id="4ec2b519-6e14-499b-b84d-ddf1330efde5" name="Changes by pown3d" comment="">
-      <change beforePath="$PROJECT_DIR$/front/html/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/product.html" afterDir="false" />
-    </list>
+    <list id="4ec2b519-6e14-499b-b84d-ddf1330efde5" name="Changes by pown3d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +86,7 @@
       <workItem from="1668089310372" duration="3710000" />
       <workItem from="1668180706844" duration="88907000" />
       <workItem from="1669027317728" duration="2596000" />
-      <workItem from="1669042999162" duration="11440000" />
+      <workItem from="1669042999162" duration="12563000" />
     </task>
     <servers />
   </component>
