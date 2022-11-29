@@ -5,26 +5,23 @@ let cart = localStorage.getItem('products');
 cart = JSON.parse(cart);
 
 let cartItem = document.getElementById('cart__items');
+let deleteButton = document.getElementsByClassName('deleteItem')
+
 
 if (cart === null) {
     // Message panier vide
     cartItem.innerText = "Votre panier est vide"
-}
-else {
+} else {
     for (let item of cart) {
-    console.log(item)
-
-    fetch("http://localhost:3000/api/products/" + item.id)
-        .then(function (res) {
-            if (res.ok) {
-                return res.json();
-            }
-        })
-        .then(function (product) {
-            console.log(product)
-
-            let element = `
-            <article class="cart__item" data-id="${product._id}" data-color="${product.color}">
+        fetch("http://localhost:3000/api/products/" + item.id)
+            .then(function (res) {
+                if (res.ok) {
+                    return res.json();
+                }
+            })
+            .then(function (product) {
+                let element = `
+            <article class="cart__item" data-id="${product._id}" data-color="${item.color}">
                 <div class="cart__item__img">
                   <img src="${product.imageUrl}" alt=${product.altTxt}>
                 </div>
@@ -47,13 +44,39 @@ else {
               </article>
             `;
 
-            cartItem.innerHTML += element;
+                cartItem.innerHTML += element;
 
-        })
+            })
+           // fonction de suppression
+            // la boucle for qui montre combien de produits il y a dans ton tableau
+            .then(function () {
+                for (let i = 0; i < deleteButton.length; i++) {
+                    deleteButton[i].addEventListener('click', function () {
+                        deleteProduct(this)
+                        // avertir de la suppression et recharger la page
+                        alert('Votre article va bien été supprimé.');
+                    })
+                }
 
-        .then(function (delBasket) {
-            // AddeventListener to delete item in Array
-        })
-}}
-const selectElement = document.querySelector('.itemQuantity');
-console.log(selectElement);
+            })
+
+
+// fonction de modification du localStorage après la suppression
+function deleteProduct(element) {
+
+    let article = element.closest('article');
+    let productId = article.dataset.id;
+    let productColor = article.dataset.color;
+
+    //console.log(productId, productColor);
+
+    for (let j = 0; j < cart.length; j++) {
+        if (cart[j].id === productId && cart[j].color === productColor) {
+            cart.splice(j, 1)
+            localStorage.setItem('products', JSON.stringify(cart))
+        }
+    }
+
+    article.remove();
+
+}}}

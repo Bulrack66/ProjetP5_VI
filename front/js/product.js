@@ -1,14 +1,6 @@
-// ETAPE 1 : Récupérer l'id dans l'URL
-// https://www.sitepoint.com/get-url-parameters-with-javascript/
-
 const queryString_url_id = window.location.search;
-
-// ETAPE 2 : Récupérer les infos de l'api pour le produit ( ID : xxxx , fetch pour l'article xxx)
-
 const urlSearchParams = new URLSearchParams(queryString_url_id);
 const _id = urlSearchParams.get("id");
-
-// fetch("localhost:3000/api/products/Id-De-Ton-Produit)
 
 fetch("http://localhost:3000/api/products/" + _id)
     .then(function (res) {
@@ -66,12 +58,11 @@ function displayProduct(product) {
         let color = document.querySelector('#colors').value;
         let quantity = document.querySelector('#quantity').value;
 
-        if (color === "") {
+        if (color === "" ) {
             alert("veuillez indiquer la couleur choisie!")
         } else if (quantity <= 0 || quantity > 100) {
             alert("veuillez indiquer la quantité entre 1 et 100")
         } else {
-
 
             let productOrder = {
                 id: _id,
@@ -91,12 +82,28 @@ function displayProduct(product) {
 
             let newItem = true;
 
+            // Localstorage = id = 1, qty = 3 , Sinopé , black
+
             for (let produit of cart) {
+
+              // EXEMPLE 1 :  id = 1, qty = 2 , Sinopé, black
+                // EXEMPLE 2 : id = 2, qty = 4, Kalycé, ROUGE
                 if (produit.id === _id && produit.color === color) {
+                    // Je passe ici EXEMPLE 1
                     produit.quantity += productOrder.quantity;
+                    // Localstorage = id = 1, qty = 5 , Sinopé , black
+
                     newItem = false;
+
+                    // EXEMPLE 1 Newitem = false;
                 }
             }
+
+            // EXEMPLE 1 = newitem = false;
+            // EXEMPLE 2 = newItem = true;
+
+            //  let cart = localStorage.getItem("products");
+            //  Localstorage = id = 1, qty = 3 , Sinopé , black
 
             if (newItem === true) {
                 cart.push(productOrder)

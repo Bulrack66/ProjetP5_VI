@@ -35,7 +35,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
     </list>
-    <list id="4ec2b519-6e14-499b-b84d-ddf1330efde5" name="Changes by pown3d" comment="" />
+    <list id="4ec2b519-6e14-499b-b84d-ddf1330efde5" name="Changes by pown3d" comment="">
+      <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +50,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/front/js/cart.js">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="10" changelist="4ec2b519-6e14-499b-b84d-ddf1330efde5" />
+        <range start1="11" end1="13" start2="14" end2="15" changelist="4ec2b519-6e14-499b-b84d-ddf1330efde5" />
+        <range start1="14" end1="27" start2="16" end2="25" changelist="4ec2b519-6e14-499b-b84d-ddf1330efde5" />
+        <range start1="49" end1="50" start2="47" end2="48" changelist="4ec2b519-6e14-499b-b84d-ddf1330efde5" />
+        <range start1="51" end1="52" start2="49" end2="60" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="53" end1="59" start2="61" end2="93" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="2H5qZmcqIQ0dW0ssANUXmWlJLGn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -86,7 +102,8 @@
       <workItem from="1668089310372" duration="3710000" />
       <workItem from="1668180706844" duration="88907000" />
       <workItem from="1669027317728" duration="2596000" />
-      <workItem from="1669042999162" duration="12563000" />
+      <workItem from="1669042999162" duration="25353000" />
+      <workItem from="1669650909556" duration="15234000" />
     </task>
     <servers />
   </component>
