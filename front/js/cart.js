@@ -5,7 +5,7 @@ let cart = localStorage.getItem('products');
 cart = JSON.parse(cart);
 
 let cartItem = document.getElementById('cart__items');
-let deleteButton = document.getElementsByClassName('deleteItem')
+let deleteButton = document.getElementsByClassName('deleteItem');
 
 
 if (cart === null) {
@@ -47,36 +47,58 @@ if (cart === null) {
                 cartItem.innerHTML += element;
 
             })
-           // fonction de suppression
-            // la boucle for qui montre combien de produits il y a dans ton tableau
+            // fonction de suppression
+            // la boucle for qui montre combien de produits il y a dans mon tableau
             .then(function () {
                 for (let i = 0; i < deleteButton.length; i++) {
                     deleteButton[i].addEventListener('click', function () {
                         deleteProduct(this)
                         // avertir de la suppression et recharger la page
-                        alert('Votre article va bien été supprimé.');
+                        alert('Votre article va bien être supprimé.');
                     })
                 }
 
             })
+        // je crée ma fonction pour la modif des quantités
 
+            .then(function () {
+                let modifQuantity = document.querySelectorAll(".itemQuantity")
+                /*console.log(modifQuantity);*/
+                for (let k = 0; k < modifQuantity.length; k++) {
+            modifQuantity[k].addEventListener("change", function (e) {
+                event.preventDefault();
 
+                let newQuantity = modifQuantity[k].value;
+               /* console.log(newQuantity)*/
+            })}
+        })
+        //Selection de l'element à modifier en fonction de son id ET sa couleur
+        function modifquantityProduct(element) {
+
+            let article = element.closest('article');
+            let productId = article.dataset.id;
+            let productColor = article.dataset.color;
+
+            console.log(productId, productColor)
+        }
 // fonction de modification du localStorage après la suppression
-function deleteProduct(element) {
+        function deleteProduct(element) {
 
-    let article = element.closest('article');
-    let productId = article.dataset.id;
-    let productColor = article.dataset.color;
+            let article = element.closest('article');
+            let productId = article.dataset.id;
+            let productColor = article.dataset.color;
 
-    //console.log(productId, productColor);
+            //console.log(productId, productColor);
 
-    for (let j = 0; j < cart.length; j++) {
-        if (cart[j].id === productId && cart[j].color === productColor) {
-            cart.splice(j, 1)
-            localStorage.setItem('products', JSON.stringify(cart))
+            for (let j = 0; j < cart.length; j++) {
+                if (cart[j].id === productId && cart[j].color === productColor) {
+                    cart.splice(j, 1)
+                    localStorage.setItem('products', JSON.stringify(cart))
+                }
+            }
+
+            article.remove();
+
         }
     }
-
-    article.remove();
-
-}}}
+}
