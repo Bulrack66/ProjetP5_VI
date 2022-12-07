@@ -4,9 +4,12 @@ let items = document.getElementById('items');
 // Création d'une fonction
 // CRUD = CREATE (POST) , READ (GET) , UPDATE (PUT) , DELETE (DELETE)
 function getProductList() {
+    // je prends l'URL pour recueillir les données
     fetch("http://localhost:3000/api/products")
+        // then récupère la promesse. la promesse nous donne des données
         .then(function (res) {
             if (res.ok) {
+                //les données sont envoyées en format json
                 return res.json();
             }
         })

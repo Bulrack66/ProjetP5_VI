@@ -1,12 +1,13 @@
 const queryString_url_id = window.location.search;
 const urlSearchParams = new URLSearchParams(queryString_url_id);
 const _id = urlSearchParams.get("id");
-
+//la fonction fetch ci-dessous permettra d’envoyer une requête GET sur le serveur localhost:
 fetch("http://localhost:3000/api/products/" + _id)
     .then(function (res) {
         if (res.ok) {
             return res.json();
         }
+        console.log()
     })
     .then(function (value) {
         displayProduct(value);

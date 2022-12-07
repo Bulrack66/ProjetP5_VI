@@ -14,6 +14,7 @@
       <change afterPath="$PROJECT_DIR$/../../Exercices/devetmoi/.idea/devetmoi.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../P2/.idea/P2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../P3/.idea/P3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/cart2.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/CalendarBundle-master/.idea/CalendarBundle-master.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/TheEvent/.idea/TheEvent.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ProgrammeUtile/calendar-12/.idea/calendar-12.iml" afterDir="false" />
@@ -34,8 +35,12 @@
       <change beforePath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" beforeDir="false" afterPath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/script.js" afterDir="false" />
     </list>
-    <list id="4ec2b519-6e14-499b-b84d-ddf1330efde5" name="Changes by pown3d" comment="" />
+    <list id="639b47ee-394c-4353-aaf3-89c762d30bce" name="Changes by pown3d" comment="">
+      <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +51,24 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/front/js/cart.js">
+      <ranges>
+        <range start1="0" end1="5" start2="0" end2="1" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="6" end1="8" start2="2" end2="4" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="9" end1="59" start2="5" end2="69" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="60" end1="62" start2="70" end2="70" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="63" end1="82" start2="71" end2="83" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="83" end1="85" start2="84" end2="84" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="86" end1="89" start2="85" end2="85" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="90" end1="91" start2="86" end2="107" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="92" end1="98" start2="108" end2="133" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="99" end1="100" start2="134" end2="142" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="101" end1="103" start2="143" end2="167" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
+        <range start1="105" end1="105" start2="169" end2="223" changelist="639b47ee-394c-4353-aaf3-89c762d30bce" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="2H5qZmcqIQ0dW0ssANUXmWlJLGn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,6 +84,7 @@
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.6" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -70,6 +94,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Francis\Desktop\OpenClassRooms 21.07-20.03\P5\P5\front\js" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,7 +116,7 @@
       <workItem from="1668180706844" duration="88907000" />
       <workItem from="1669027317728" duration="2596000" />
       <workItem from="1669042999162" duration="25353000" />
-      <workItem from="1669650909556" duration="38525000" />
+      <workItem from="1669650909556" duration="139990000" />
     </task>
     <servers />
   </component>
