@@ -1,3 +1,4 @@
+// variable globale : variable créée normalement, en dehors d'une fonction et qui existe de partout.
 let items = document.getElementById('items');
 
 
@@ -14,7 +15,7 @@ function getProductList() {
             }
         })
         // products == res.json()
-        .then(function (products){
+        .then(function (products) {
             // Pour chaque lignes dans products tu me créer une variable product
             for (let product of products) {
                 insertProduct(product)
@@ -26,7 +27,7 @@ function getProductList() {
 function insertProduct(product) {
 
     let anchor = document.createElement('a');
-    anchor.href = "./product.html?id=" + product._id // ./product.html?id=xxxxxxx
+    anchor.href = "./product.html?id=" + product._id
 
     let article = document.createElement('article');
 

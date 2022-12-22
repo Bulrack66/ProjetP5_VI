@@ -13,7 +13,7 @@ fetch("http://localhost:3000/api/products/")
         // JSON.parse transforme une chaîne JSON en un objet JavaScript
     })
     .catch(function (error) {
-
+        console.log(error)
     });
 
 function displayItem(api, products) {
@@ -96,6 +96,7 @@ function getTotalQty(api, products) {
             document.getElementById("totalQuantity").innerText = sumQty;
             document.getElementById("totalPrice").innerText = priceTotal;
         } else {
+            console.log('Le panier est vide');
             // Si mon panier est vide
         }
     }
@@ -104,6 +105,7 @@ function getTotalQty(api, products) {
 function changeQty(api, products) {
     const inputs = document.querySelectorAll(".itemQuantity");
     inputs.forEach((input) => {
+        // il faut écouter si il y a un changement
         input.addEventListener("change", function () {
             const product = input.closest("article");
             const productId = product.dataset.id;
@@ -159,10 +161,8 @@ function deleteItem(api, products) {
     })
 }
 
-// Vérifier le formulaire
 // https://regex101.com/  / https://regexr.com/
 
-// c : Vérifier la bonne saisies des inputs ( formulaire )
 let firstName = document.getElementById("firstName");
 firstName.addEventListener("change", function () {
     validFirstName(this);
@@ -172,6 +172,7 @@ function validFirstName(inputFirstName) {
     let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |'))*[a-zA-Zàâäéèêëïîôöùûüç]{2,15}$");
 
     if (!textRegExp.test(inputFirstName.value)) {
+        //Pour récupéré l'input
         document.getElementById("firstNameErrorMsg").innerText = "Exemple : alex";
         document.getElementById('firstNameErrorMsg').style.color = 'red';
         return false;
@@ -183,8 +184,6 @@ function validFirstName(inputFirstName) {
         return false;
     } else {
         document.getElementById("firstNameErrorMsg").innerText = "";
-        document.getElementById('firstName').style.color = 'black';
-        document.getElementById('firstName').style.background = 'lightgreen';
         return true;
     }
 };
@@ -208,17 +207,17 @@ function validLastName(inputLastName) {
         return false;
     } else {
         document.getElementById("lastNameErrorMsg").innerText = "";
-        document.getElementById('lastName').style.background = 'lightgreen';
         return true;
     }
 };
 
-    let address = document.getElementById("address");
-    address.addEventListener("change", function () {
+let address = document.getElementById("address");
+address.addEventListener("change", function () {
     validAddress(this);
 });
+
 function validAddress(inputAddress) {
-    let textRegExp = new RegExp("^[a-zA-Z0-9\s]{1,3}([,. ]?)+[-a-zA-Zàâäéèêëïîôöùûüç ]{2,30}$");
+    let textRegExp = new RegExp("^[a-zA-Z0-9\s]{1,5}([,. ]?)+[-a-zA-Zàâäéèêëïîôöùûüç ]{2,30}$");
 
     if (!textRegExp.test(inputAddress.value)) {
         document.getElementById("addressErrorMsg").innerText = "Merci  de débuter par des chiffres et de renseigner votre adresse d'au maximum 30 caractères.";
@@ -231,7 +230,6 @@ function validAddress(inputAddress) {
         return false;
     } else {
         document.getElementById("addressErrorMsg").innerText = "";
-        document.getElementById('address').style.background = 'lightgreen';
         return true;
     }
 };
@@ -240,6 +238,7 @@ let city = document.getElementById("city");
 city.addEventListener("change", function () {
     validCity(this);
 });
+
 function validCity(inputCity) {
     let textRegExp = new RegExp("^[a-z A-ZÀ-ÿ-]{1,45}$");
 
@@ -254,10 +253,10 @@ function validCity(inputCity) {
         return false;
     } else {
         document.getElementById("cityErrorMsg").innerText = "";
-        document.getElementById('city').style.background = 'lightgreen';
         return true;
     }
 };
+
 let email = document.getElementById("email");
 email.addEventListener("change", function () {
     validEmail(this);
@@ -266,49 +265,41 @@ email.addEventListener("change", function () {
 function validEmail(inputEmail) {
     let textRegExp = new RegExp("^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$");
     if (!textRegExp.test(inputEmail.value)) {
-        email.style.border = '1px solid red';
         document.getElementById("emailErrorMsg").innerText = "Veuillez entrer une adresse mail valide. exemple@mail.com";
         document.getElementById('emailErrorMsg').style.color = 'red';
         return false;
     } else if (inputEmail.value.length < 4 || inputEmail.value.length > 50) {
-        email.style.border = '1px solid red';
         document.getElementById("emailErrorMsg").innerText =
             "Corriger votre adresse mail";
         document.getElementById('emailErrorMsg').style.color = 'red';
         return false;
     } else {
         document.getElementById("emailErrorMsg").innerText = "";
-        document.getElementById('email').style.background = 'lightgreen';
         return true;
     }
 };
 
 
-/// Prochaine étape : Validation de tous les inputs
-
 //Je sélectionne le btn
 const btnForm = document.querySelector("#order");
 
-// 1 : Ajouter un event Listener sur le bouton Commander
 //je constate le clic du input
-
 btnForm.addEventListener("click", function (e) {
-    // a : Stopper la propagation
+    // Stopper la propagation
     e.preventDefault();
 
-    // b : Vérifier que le panier n'est pas vide.
     let products = JSON.parse(localStorage.getItem("products"))
     if (products.length === 0) {
         window.alert(" oups! le pannier est vide !")
         return
-    } else if (validFirstName(firstName) === true && validLastName(lastName) === true && validAddress(address) === true && validCity(city) === true && validEmail(email) === true ) {
+    } else if (validFirstName(firstName) === true && validLastName(lastName) === true && validAddress(address) === true && validCity(city) === true && validEmail(email) === true) {
         const cart = JSON.parse(localStorage.getItem('products'))
         const productsID = [];
         products.forEach((cart) => {
             productsID.push(cart.id)
         })
         alert('Commande envoyée!');
-// d : Créer un objet pour la route en POST
+//  Créer un objet pour la route en POST
         const order = {
             contact: {
                 firstName: firstName.value,
@@ -328,7 +319,7 @@ btnForm.addEventListener("click", function (e) {
 
 });
 
-// e : Créer une fonction qui récupére l'objet créer en (d) et l'envoyer en POST sur l'API
+// Créer une fonction qui récupére l'objet créer et l'envoyer en POST sur l'API
 function orderProduct(order) {
     fetch("http://localhost:3000/api/products/order", {
         method: 'POST',

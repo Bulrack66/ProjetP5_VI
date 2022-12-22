@@ -1,6 +1,7 @@
 const queryString_url_id = window.location.search;
 const urlSearchParams = new URLSearchParams(queryString_url_id);
 const _id = urlSearchParams.get("id");
+
 //la fonction fetch ci-dessous permettra d’envoyer une requête GET sur le serveur localhost:
 fetch("http://localhost:3000/api/products/" + _id)
     .then(function (res) {
@@ -16,7 +17,8 @@ fetch("http://localhost:3000/api/products/" + _id)
     .catch(function (err) {
         let container = document.querySelector(".limitedWidthBlockContainer");
         container.innerText =
-            "<h3>Nous n'avons pas réussi à afficher votre choix. Avez-vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.</h3>";
+            "<h3>Nous n'avons pas réussi à afficher votre choix. Avez-vous bien lancé le serveur local (Port 3000) ? " +
+            "<br>Si le problème persiste, contactez-nous.</h3>";
         container.style.textAlign = "center";
         container.style.padding = "15px 0";
     })
@@ -55,11 +57,10 @@ function displayProduct(product) {
     addBtn.addEventListener('click', (e) => {
         e.preventDefault();
 
-
         let color = document.querySelector('#colors').value;
         let quantity = document.querySelector('#quantity').value;
 
-        if (color === "" ) {
+        if (color === "") {
             alert("veuillez indiquer la couleur choisie!")
         } else if (quantity <= 0 || quantity > 100) {
             alert("veuillez indiquer la quantité entre 1 et 100")
@@ -82,29 +83,13 @@ function displayProduct(product) {
             }
 
             let newItem = true;
-
-            // Localstorage = id = 1, qty = 3 , Sinopé , black
-
             for (let produit of cart) {
 
-              // EXEMPLE 1 :  id = 1, qty = 2 , Sinopé, black
-                // EXEMPLE 2 : id = 2, qty = 4, Kalycé, ROUGE
                 if (produit.id === _id && produit.color === color) {
-                    // Je passe ici EXEMPLE 1
                     produit.quantity += productOrder.quantity;
-                    // Localstorage = id = 1, qty = 5 , Sinopé , black
-
                     newItem = false;
-
-                    // EXEMPLE 1 Newitem = false;
                 }
             }
-
-            // EXEMPLE 1 = newitem = false;
-            // EXEMPLE 2 = newItem = true;
-
-            //  let cart = localStorage.getItem("products");
-            //  Localstorage = id = 1, qty = 3 , Sinopé , black
 
             if (newItem === true) {
                 cart.push(productOrder)
@@ -112,8 +97,10 @@ function displayProduct(product) {
 
             localStorage.setItem('products', JSON.stringify(cart))
 
-            if (window.confirm(`Le canapé de référence ${product.name} et de couleur ${color}  a été ajouté au panier.
-Consulter le panier OK ou rester sur la page`)) {
+            if (window.confirm(
+                `Le canapé de référence ${product.name} et de couleur ${color}  a été ajouté au panier.
+                 Consulter le panier OK ou rester sur la page`
+            )) {
                 document.location.href = './cart.html'
             }
 
