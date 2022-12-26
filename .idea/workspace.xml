@@ -34,14 +34,9 @@
       <change beforePath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" beforeDir="false" afterPath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/confirmation.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/confirmation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/script.js" afterDir="false" />
-    </list>
-    <list id="95a4a90e-5538-4ecc-89ce-730ce58aff26" name="Changes by pown3d" comment="">
-      <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/script.js" afterDir="false" />
     </list>
+    <list id="95a4a90e-5538-4ecc-89ce-730ce58aff26" name="Changes by pown3d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,45 +47,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/front/js/cart.js">
-      <ranges>
-        <range start1="15" end1="16" start2="15" end2="16" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="98" end1="98" start2="98" end2="99" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="106" end1="106" start2="107" end2="108" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="161" end1="162" start2="163" end2="163" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="164" end1="165" start2="165" end2="165" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="174" end1="174" start2="174" end2="175" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="185" end1="187" start2="186" end2="186" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="210" end1="211" start2="209" end2="209" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="215" end1="217" start2="213" end2="215" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="219" end1="219" start2="217" end2="218" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="220" end1="221" start2="219" end2="220" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="233" end1="234" start2="232" end2="232" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="242" end1="242" start2="240" end2="241" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="256" end1="257" start2="255" end2="255" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="260" end1="260" start2="258" end2="259" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="268" end1="269" start2="267" end2="267" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="273" end1="274" start2="271" end2="271" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="280" end1="281" start2="277" end2="277" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="286" end1="288" start2="282" end2="282" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="291" end1="292" start2="285" end2="285" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="293" end1="294" start2="286" end2="286" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="295" end1="296" start2="287" end2="288" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="298" end1="299" start2="290" end2="290" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="303" end1="304" start2="294" end2="295" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="310" end1="311" start2="301" end2="302" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="330" end1="331" start2="321" end2="322" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/front/js/script.js">
-      <ranges>
-        <range start1="0" end1="0" start2="0" end2="1" changelist="3aff5ad7-a7a9-4ac9-826b-0dbddac9389c" />
-        <range start1="16" end1="17" start2="17" end2="18" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-        <range start1="28" end1="29" start2="29" end2="30" changelist="95a4a90e-5538-4ecc-89ce-730ce58aff26" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="2H5qZmcqIQ0dW0ssANUXmWlJLGn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -138,7 +94,7 @@
       <workItem from="1668180706844" duration="88907000" />
       <workItem from="1669027317728" duration="2596000" />
       <workItem from="1669042999162" duration="25353000" />
-      <workItem from="1669650909556" duration="299386000" />
+      <workItem from="1669650909556" duration="304135000" />
     </task>
     <servers />
   </component>

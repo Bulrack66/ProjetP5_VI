@@ -121,6 +121,10 @@ function changeQty(api, products) {
                         product.id === productId && product.color === productColor
                 );
                 products[objIndex].quantity = input.valueAsNumber;
+                if (input.valueAsNumber > 100) {
+                    alert('100 Produits maximum')
+                    return;
+                }
             }
             let productsJson = JSON.stringify(products);
             localStorage.setItem("products", productsJson);
@@ -173,7 +177,8 @@ function validFirstName(inputFirstName) {
 
     if (!textRegExp.test(inputFirstName.value)) {
         //Pour récupéré l'input
-        document.getElementById("firstNameErrorMsg").innerText = "Exemple : alex";
+        document.getElementById("firstNameErrorMsg").innerText = " Le prénom doit avoir 2 lettres minimum et pas de caractères spéciaux ou chiffres."  +
+            "Exemple : alex";
         document.getElementById('firstNameErrorMsg').style.color = 'red';
         return false;
 
