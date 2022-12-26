@@ -23,8 +23,8 @@ fetch("http://localhost:3000/api/products/" + _id)
         container.style.padding = "15px 0";
     })
 
-// ETAPE 3 : Afficher les informations du fetch dans le DOM
-// Affichage du nom de produit dans la balise h1
+// Afficher les informations du fetch dans le DOM
+    // Affichage du nom de produit dans la balise h1
 function displayProduct(product) {
 
     let parentTitle = document.getElementById("title")

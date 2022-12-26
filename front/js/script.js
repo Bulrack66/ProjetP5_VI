@@ -5,7 +5,7 @@ let items = document.getElementById('items');
 // Création d'une fonction
 // CRUD = CREATE (POST) , READ (GET) , UPDATE (PUT) , DELETE (DELETE)
 function getProductList() {
-    // je prends l'URL pour recueillir les données
+    // je prends l'URL pour recueillir les données. Récupérer les données de l'api.
     fetch("http://localhost:3000/api/products")
         // then récupère la promesse. la promesse nous donne des données
         .then(function (res) {
@@ -16,7 +16,7 @@ function getProductList() {
         })
         // products == res.json()
         .then(function (products) {
-            // Pour chaque lignes dans products tu me créer une variable product
+            // Pour chaque lignes dans products tu me crées une variable product
             for (let product of products) {
                 insertProduct(product)
             }

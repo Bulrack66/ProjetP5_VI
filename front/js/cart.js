@@ -172,6 +172,7 @@ firstName.addEventListener("change", function () {
     validFirstName(this);
 });
 
+
 function validFirstName(inputFirstName) {
     let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |'))*[a-zA-Zàâäéèêëïîôöùûüç]{2,15}$");
 
