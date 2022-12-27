@@ -64,7 +64,7 @@ function createProductCard(localStorage, api) {
     //'beforeend' : Juste à l'intérieur de l'element , après son dernier enfant.
 }
 
-
+//------------Mise à jour du total ttc en fonction du nombre de produit pour la commande
 function getTotalQty(api, products) {
     // création d'une variable à 0 par défaut
     let sumQty = 0;
@@ -101,7 +101,7 @@ function getTotalQty(api, products) {
         }
     }
 }
-
+// ----------- modification de la quantité total du panier
 function changeQty(api, products) {
     const inputs = document.querySelectorAll(".itemQuantity");
     inputs.forEach((input) => {
@@ -133,7 +133,7 @@ function changeQty(api, products) {
         });
     });
 }
-
+// ----------Suppression du produit du panier
 function deleteItem(api, products) {
     const itemDelete = document.querySelectorAll(".deleteItem");
     itemDelete.forEach((item) => {
@@ -142,6 +142,7 @@ function deleteItem(api, products) {
             product.remove();
             const productId = product.dataset.id;
             const productColor = product.dataset.color;
+            alert("Le produit est supprimé ! re")
             if (
                 products.some(
                     (e) => e.id === productId && e.color === productColor
@@ -165,13 +166,13 @@ function deleteItem(api, products) {
     })
 }
 
+//------------------------ F O R M U L AI R E --
 // https://regex101.com/  / https://regexr.com/
 
 let firstName = document.getElementById("firstName");
 firstName.addEventListener("change", function () {
     validFirstName(this);
 });
-
 
 function validFirstName(inputFirstName) {
     let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |'))*[a-zA-Zàâäéèêëïîôöùûüç]{2,15}$");
@@ -226,7 +227,7 @@ function validAddress(inputAddress) {
     let textRegExp = new RegExp("^[a-zA-Z0-9\s]{1,5}([,. ]?)+[-a-zA-Zàâäéèêëïîôöùûüç ]{2,30}$");
 
     if (!textRegExp.test(inputAddress.value)) {
-        document.getElementById("addressErrorMsg").innerText = "Merci  de débuter par des chiffres et de renseigner votre adresse d'au maximum 30 caractères.";
+        document.getElementById("addressErrorMsg").innerText = "Merci de renseigner votre adresse d'au maximum 30 caractères.";
         document.getElementById('addressErrorMsg').style.color = 'red';
         return false;
     } else if (inputAddress.value.length < 2) {
@@ -246,10 +247,10 @@ city.addEventListener("change", function () {
 });
 
 function validCity(inputCity) {
-    let textRegExp = new RegExp("^[a-z A-ZÀ-ÿ-]{1,45}$");
+    let textRegExp = new RegExp("^([A-Za-zéèàïêç\\- \\s]{1,50}\\s+[0-9]{5}){1,45}$");
 
     if (!textRegExp.test(inputCity.value)) {
-        document.getElementById("cityErrorMsg").innerText = "Veuillez entrer un nom de ville valide";
+        document.getElementById("cityErrorMsg").innerText = "Merci de renseigner votre ville et votre code postal. Exemple : « Paris 00000 »";
         document.getElementById('cityErrorMsg').style.color = 'red';
         return false;
     } else if (inputCity.value.length < 4) {
@@ -305,6 +306,7 @@ btnForm.addEventListener("click", function (e) {
             productsID.push(cart.id)
         })
         alert('Commande envoyée!');
+
 //  Créer un objet pour la route en POST
         const order = {
             contact: {
@@ -325,7 +327,7 @@ btnForm.addEventListener("click", function (e) {
 
 });
 
-// Créer une fonction qui récupére l'objet créer et l'envoyer en POST sur l'API
+// Créer une fonction qui récupère l'objet créer et l'envoyer en POST sur l'API
 function orderProduct(order) {
     fetch("http://localhost:3000/api/products/order", {
         method: 'POST',

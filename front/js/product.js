@@ -1,5 +1,7 @@
+// on récupère les id avec l'url courante
 const queryString_url_id = window.location.search;
 const urlSearchParams = new URLSearchParams(queryString_url_id);
+// la propriété "searchParams" de "url" nous retourne un objet de type "URLSearchParams". on récupérer sa valeur.
 const _id = urlSearchParams.get("id");
 
 //la fonction fetch ci-dessous permettra d’envoyer une requête GET sur le serveur localhost:
@@ -17,10 +19,13 @@ fetch("http://localhost:3000/api/products/" + _id)
     .catch(function (err) {
         let container = document.querySelector(".limitedWidthBlockContainer");
         container.innerText =
-            "<h3>Nous n'avons pas réussi à afficher votre choix. Avez-vous bien lancé le serveur local (Port 3000) ? " +
-            "<br>Si le problème persiste, contactez-nous.</h3>";
+            "Nous n'avons pas réussi à afficher votre choix. Avez-vous bien lancé le serveur local (Port 3000) ? " +
+            "Si le problème persiste, contactez-nous.";
+        container.style.border = "solid 2px red ";
         container.style.textAlign = "center";
-        container.style.padding = "15px 0";
+        container.style.padding = "15px 5px";
+
+
     })
 
 // Afficher les informations du fetch dans le DOM
@@ -53,10 +58,10 @@ function displayProduct(product) {
     }
     // Activation du bouton
     let addBtn = document.querySelector('#addToCart');
-
+        //écouteur d'évènements
     addBtn.addEventListener('click', (e) => {
         e.preventDefault();
-
+        //preventDefault(): comment bloquer ce comportement par défaut.
         let color = document.querySelector('#colors').value;
         let quantity = document.querySelector('#quantity').value;
 
@@ -94,9 +99,9 @@ function displayProduct(product) {
             if (newItem === true) {
                 cart.push(productOrder)
             }
-
+//La méthode setItem() ajoute le duo clé-valeur à l'emplacement de stockage et JSON.stringify() convertit une valeur JavaScript en chaîne JSON
             localStorage.setItem('products', JSON.stringify(cart))
-
+//La fonction $() remplace la fonction document.getElementById() du DOM
             if (window.confirm(
                 `Le canapé de référence ${product.name} et de couleur ${color}  a été ajouté au panier.
                  Consulter le panier OK ou rester sur la page`

@@ -6,11 +6,12 @@ let items = document.getElementById('items');
 // CRUD = CREATE (POST) , READ (GET) , UPDATE (PUT) , DELETE (DELETE)
 function getProductList() {
     // je prends l'URL pour recueillir les données. Récupérer les données de l'api.
+    // Envoyer une requête HTTP de type GET (ce qui est le cas par défaut avec Fetch) au service web.
     fetch("http://localhost:3000/api/products")
         // then récupère la promesse. la promesse nous donne des données
         .then(function (res) {
             if (res.ok) {
-                //les données sont envoyées en format json
+                //les données sont envoyées en format json.
                 return res.json();
             }
         })
@@ -22,6 +23,7 @@ function getProductList() {
             }
         })
 }
+
 
 // On boucle x fois en fonction du nombre de produits présent dans l'API
 function insertProduct(product) {

@@ -33,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/../../../Copie de discord/Tchalakov_Christophe_P2_BOOKI_062022/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" beforeDir="false" afterPath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/script.js" afterDir="false" />
     </list>
@@ -94,7 +95,7 @@
       <workItem from="1668180706844" duration="88907000" />
       <workItem from="1669027317728" duration="2596000" />
       <workItem from="1669042999162" duration="25353000" />
-      <workItem from="1669650909556" duration="307234000" />
+      <workItem from="1669650909556" duration="326383000" />
     </task>
     <servers />
   </component>
