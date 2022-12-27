@@ -142,7 +142,7 @@ function deleteItem(api, products) {
             product.remove();
             const productId = product.dataset.id;
             const productColor = product.dataset.color;
-            alert("Le produit est supprimé ! re")
+            alert("Le produit est supprimé ! ")
             if (
                 products.some(
                     (e) => e.id === productId && e.color === productColor

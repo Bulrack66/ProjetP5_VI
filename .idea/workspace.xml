@@ -33,9 +33,10 @@
       <change beforePath="$PROJECT_DIR$/../../../Copie de discord/Tchalakov_Christophe_P2_BOOKI_062022/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" beforeDir="false" afterPath="$PROJECT_DIR$/../../P4/OriginPantherP4/originePantherP4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/html/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/html/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/html/product.html" afterDir="false" />
     </list>
     <list id="95a4a90e-5538-4ecc-89ce-730ce58aff26" name="Changes by pown3d" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +79,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Francis\Desktop\OpenClassRooms 21.07-20.03\P5\P5\front\js" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Francis\Desktop\OpenClassRooms 21.07-20.03\P5\P5\front\html" />
+      <recent name="C:\Users\Francis\Desktop\OpenClassRooms 21.07-20.03\P5\P5" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -95,7 +100,7 @@
       <workItem from="1668180706844" duration="88907000" />
       <workItem from="1669027317728" duration="2596000" />
       <workItem from="1669042999162" duration="25353000" />
-      <workItem from="1669650909556" duration="326383000" />
+      <workItem from="1669650909556" duration="327572000" />
     </task>
     <servers />
   </component>
