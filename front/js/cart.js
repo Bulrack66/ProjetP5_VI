@@ -9,8 +9,9 @@ fetch("http://localhost:3000/api/products/")
             return res.json();
         }
     })
-    //Storage.getItem() est utilisée pour obtenir les données de l'élément depuis le stockage
+
     .then(function getKanap(api) {
+        //Storage.getItem() est utilisée pour obtenir les données de l'élément depuis le stockage
         let products = JSON.parse(localStorage.getItem("products"));
         displayItem(api, products);
         // JSON.parse transforme une chaîne JSON en un objet JavaScript
@@ -25,7 +26,7 @@ function displayItem(api, products) {
     //Affichage d'un panier vide
     if (products === null || products.length === 0) {
         const emptyCart = document.createElement("p");
-        emptyCart.innerText = "Votre panier est vide";
+        emptyCart.innerText = "Votre panier est vide.Veuillez rajouter des articles à partir de la page d'accueil avant de passer commande.";
         document.querySelector('#cart__items').appendChild(emptyCart);
     } else {
         for (let product of products) {
@@ -78,13 +79,14 @@ function getTotalQty(api, products) {
     // idem création d'une variable à 0
     let priceTotal = 0;
     // si le panier est vide alors message au visiteur
+
     if (products === null) {
         document.getElementById("totalQuantity").innerText
         // else ( sinon )
     } else {
         // On boucle sur products
         for (let product of products) {
-            sumQty = sumQty + parseInt(product.quantity) ;
+            sumQty = sumQty + parseInt(product.quantity);
         }
         // Si la somme du panier est supérieur à 1
         if (sumQty >= 1) {
@@ -108,6 +110,7 @@ function getTotalQty(api, products) {
         }
     }
 }
+
 // ----------- modification de la quantité total du panier
 function changeQty(api, products) {
     const inputs = document.querySelectorAll(".itemQuantity");
@@ -127,11 +130,15 @@ function changeQty(api, products) {
                     (product) =>
                         product.id === productId && product.color === productColor
                 );
+                let oldValue = products[objIndex].quantity
                 products[objIndex].quantity = input.valueAsNumber;
                 if (input.valueAsNumber > 100) {
-                   alert('100 Produits maximum')
-                    return ;
+                    input.value = oldValue;
+                    alert('100 Produits maximum');
+
+                    return;
                 }
+                console.log(product.quantity)
             }
             let productsJson = JSON.stringify(products);
             localStorage.setItem("products", productsJson);
@@ -187,7 +194,7 @@ function validFirstName(inputFirstName) {
 
     if (!textRegExp.test(inputFirstName.value)) {
         //Pour récupéré l'input
-        document.getElementById("firstNameErrorMsg").innerText = " Le prénom doit avoir 2 lettres minimum et pas de caractères spéciaux autre que le trait d'union ou chiffres."  +
+        document.getElementById("firstNameErrorMsg").innerText = " Le prénom doit avoir 2 lettres minimum et pas de caractères spéciaux autre que le trait d'union ou chiffres." +
             "Exemple : alex";
         document.getElementById('firstNameErrorMsg').style.color = 'red';
         return false;
@@ -283,7 +290,7 @@ function validEmail(inputEmail) {
         document.getElementById("emailErrorMsg").innerText = "Veuillez entrer une adresse mail valide. exemple@mail.com";
         document.getElementById('emailErrorMsg').style.color = 'red';
         return false;
-    } else if (inputEmail.value.length < 4 || inputEmail.value.length > 50) {
+    } else if (inputEmail.value.length < 4 || inputEmail.value.length > 40) {
         document.getElementById("emailErrorMsg").innerText =
             "Corriger votre adresse mail";
         document.getElementById('emailErrorMsg').style.color = 'red';
