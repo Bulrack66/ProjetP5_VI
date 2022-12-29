@@ -4,7 +4,7 @@ const urlSearchParams = new URLSearchParams(queryString_url_id);
 // la propriété "searchParams" de "url" nous retourne un objet de type "URLSearchParams". on récupérer sa valeur.
 const _id = urlSearchParams.get("id");
 
-//la fonction fetch ci-dessous permettra d’envoyer une requête GET sur le serveur localhost:
+//Récupération des données du serveur. La fonction fetch ci-dessous permettra d’envoyer une requête GET sur le serveur localhost:
 fetch("http://localhost:3000/api/products/" + _id)
     .then(function (res) {
         if (res.ok) {
@@ -24,9 +24,7 @@ fetch("http://localhost:3000/api/products/" + _id)
         container.style.border = "solid 2px red ";
         container.style.textAlign = "center";
         container.style.padding = "15px 5px";
-
-
-    })
+    });
 
 // Afficher les informations du fetch dans le DOM
     // Affichage du nom de produit dans la balise h1
@@ -37,7 +35,7 @@ function displayProduct(product) {
     //Affichage du nom de la page dans la balise Title pour l'onglet
     const Title = document.querySelector("title");
     Title.innerText = product.name;
-
+    console.log(Title )
     // Affichage de l'image
     let img = document.createElement('img');
     img.src = product.imageUrl;
