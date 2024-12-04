@@ -1,3 +1,6 @@
+//_________________Modification de la balise title du navigateur cart --> Page Panier (plus compréhensible par l'utilisateur)_____________________
+document.title = "Page Panier";
+
 // Récupération des informations des produits depuis l'API
 
 fetch("http://localhost:3000/api/products/")
@@ -6,20 +9,24 @@ fetch("http://localhost:3000/api/products/")
             return res.json();
         }
     })
-    //Storage.getItem() est utilisée pour obtenir les données de l'élément depuis le stockage
+
     .then(function getKanap(api) {
+        //Storage.getItem() est utilisée pour obtenir les données de l'élément depuis le stockage
         let products = JSON.parse(localStorage.getItem("products"));
         displayItem(api, products);
         // JSON.parse transforme une chaîne JSON en un objet JavaScript
     })
     .catch(function (error) {
         console.log(error)
+        // Une erreur est survenue
     });
 
+// cette fonction affiche les produits du panier contenu dans le Local Storage
 function displayItem(api, products) {
+    //Affichage d'un panier vide
     if (products === null || products.length === 0) {
         const emptyCart = document.createElement("p");
-        emptyCart.innerText = "Votre panier est vide";
+        emptyCart.innerText = "Votre panier est vide.Veuillez rajouter des articles à partir de la page d'accueil avant de passer commande.";
         document.querySelector('#cart__items').appendChild(emptyCart);
     } else {
         for (let product of products) {
@@ -32,32 +39,33 @@ function displayItem(api, products) {
         changeQty(api, products);
         deleteItem(api, products);
         getTotalQty(api, products);
-// L'appel à la fonction pour affichage
+        // L'appel à la fonction pour affichage
     }
-}
+};
 
+//Création des fiches produits de la page panier
 function createProductCard(localStorage, api) {
     const produitPanier =
         `<article class="cart__item" data-id="${localStorage.id}" data-color=${localStorage.color}>
-    <div class="cart__item__img">
-      <img src="${api.imageUrl}" alt="Photographie d'un canapé">
-    </div>
-    <div class="cart__item__content">
-      <div class="cart__item__content__titlePrice">
-        <h2>${api.name} - ${localStorage.color}</h2>
-        <p id="partielPrice">${api.price} €</p>
-     </div>
-      <div class="cart__item__content__settings">
-        <div class="cart__item__content__settings__quantity">
-          <p>Qté :</p>
-          <input type="number" class="itemQuantity" data-id="${localStorage.id}" name="itemQuantity" min="1" max="100" pattern="[0-9]+" value="${localStorage.quantity}">
-        </div>
-        <div class="cart__item__content__settings__delete">
-          <p id="deleteItem" class="deleteItem">Supprimer</p>
-       </div>
-      </div>
-    </div>
-       </article>`;
+            <div class="cart__item__img">
+              <img src="${api.imageUrl}" alt="${api.altTxt}">
+            </div>
+            <div class="cart__item__content">
+              <div class="cart__item__content__titlePrice">
+                <h2>${api.name} - ${localStorage.color}</h2>
+                <p id="partielPrice">${api.price} €</p>
+             </div>
+              <div class="cart__item__content__settings">
+                <div class="cart__item__content__settings__quantity">
+                  <p>Qté :</p>
+                  <input type="number" class="itemQuantity" data-id="${localStorage.id}" name="itemQuantity" min="1" max="100" pattern="[0-9]+" value="${localStorage.quantity}">
+                </div>
+                <div class="cart__item__content__settings__delete">
+                  <p id="deleteItem" class="deleteItem">Supprimer</p>
+               </div>
+              </div>
+            </div>
+        </article>`;
     document
         .getElementById("cart__items")
         .insertAdjacentHTML("beforeend", produitPanier);
@@ -71,6 +79,7 @@ function getTotalQty(api, products) {
     // idem création d'une variable à 0
     let priceTotal = 0;
     // si le panier est vide alors message au visiteur
+
     if (products === null) {
         document.getElementById("totalQuantity").innerText
         // else ( sinon )
@@ -101,6 +110,7 @@ function getTotalQty(api, products) {
         }
     }
 }
+
 // ----------- modification de la quantité total du panier
 function changeQty(api, products) {
     const inputs = document.querySelectorAll(".itemQuantity");
@@ -120,11 +130,15 @@ function changeQty(api, products) {
                     (product) =>
                         product.id === productId && product.color === productColor
                 );
+                let oldValue = products[objIndex].quantity
                 products[objIndex].quantity = input.valueAsNumber;
                 if (input.valueAsNumber > 100) {
-                    alert('100 Produits maximum')
+                    input.value = oldValue;
+                    alert('100 Produits maximum');
+
                     return;
                 }
+                console.log(product.quantity)
             }
             let productsJson = JSON.stringify(products);
             localStorage.setItem("products", productsJson);
@@ -133,6 +147,7 @@ function changeQty(api, products) {
         });
     });
 }
+
 // ----------Suppression du produit du panier
 function deleteItem(api, products) {
     const itemDelete = document.querySelectorAll(".deleteItem");
@@ -175,11 +190,11 @@ firstName.addEventListener("change", function () {
 });
 
 function validFirstName(inputFirstName) {
-    let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |'))*[a-zA-Zàâäéèêëïîôöùûüç]{2,15}$");
+    let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |')?)*[a-zA-Zàâäéèêëïîôöùûüç]{2,15}$");
 
     if (!textRegExp.test(inputFirstName.value)) {
         //Pour récupéré l'input
-        document.getElementById("firstNameErrorMsg").innerText = " Le prénom doit avoir 2 lettres minimum et pas de caractères spéciaux ou chiffres."  +
+        document.getElementById("firstNameErrorMsg").innerText = " Le prénom doit avoir 2 lettres minimum et pas de caractères spéciaux autre que le trait d'union ou chiffres." +
             "Exemple : alex";
         document.getElementById('firstNameErrorMsg').style.color = 'red';
         return false;
@@ -201,10 +216,10 @@ lastName.addEventListener("change", function () {
 });
 
 function validLastName(inputLastName) {
-    let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |'))*[a-zA-Zàâäéèêëïîôöùûüç]{3,15}$");
+    let textRegExp = new RegExp("^([a-zA-Zàâäéèêëïîôöùûüç](?:. |-| |')?)*[a-zA-Zàâäéèêëïîôöùûüç]{2,15}$");
 
     if (!textRegExp.test(inputLastName.value)) {
-        document.getElementById("lastNameErrorMsg").innerText = "Exemple : Dupond";
+        document.getElementById("lastNameErrorMsg").innerText = "Le nom doit avoir au moins deux caractères. Exemple : Dupond  ou Jean-marc";
         document.getElementById('lastNameErrorMsg').style.color = 'red';
         return false;
     } else if (inputLastName.value.length < 3) {
@@ -224,10 +239,10 @@ address.addEventListener("change", function () {
 });
 
 function validAddress(inputAddress) {
-    let textRegExp = new RegExp("^[a-zA-Z0-9\s]{1,5}([,. ]?)+[-a-zA-Zàâäéèêëïîôöùûüç ]{2,30}$");
+    let textRegExp = new RegExp("^[a-zA-ZÀ-ÿ0-9 ,.'-]{2,30}$", "g");
 
     if (!textRegExp.test(inputAddress.value)) {
-        document.getElementById("addressErrorMsg").innerText = "Merci de renseigner votre adresse d'au maximum 30 caractères.";
+        document.getElementById("addressErrorMsg").innerText = "Merci de renseigner votre adresse d'au maximum 30 caractères. Exemple : 10 rue jean paul";
         document.getElementById('addressErrorMsg').style.color = 'red';
         return false;
     } else if (inputAddress.value.length < 2) {
@@ -275,7 +290,7 @@ function validEmail(inputEmail) {
         document.getElementById("emailErrorMsg").innerText = "Veuillez entrer une adresse mail valide. exemple@mail.com";
         document.getElementById('emailErrorMsg').style.color = 'red';
         return false;
-    } else if (inputEmail.value.length < 4 || inputEmail.value.length > 50) {
+    } else if (inputEmail.value.length < 4 || inputEmail.value.length > 40) {
         document.getElementById("emailErrorMsg").innerText =
             "Corriger votre adresse mail";
         document.getElementById('emailErrorMsg').style.color = 'red';
@@ -287,14 +302,14 @@ function validEmail(inputEmail) {
 };
 
 
-//Je sélectionne le btn
+//Je sélectionne le btn.
 const btnForm = document.querySelector("#order");
 
-//je constate le clic du input
+//je constate le clic du input. Je récupère ces données lors du click sur la bouton "commander"
 btnForm.addEventListener("click", function (e) {
     // Stopper la propagation
     e.preventDefault();
-
+    //si le panier est vide
     let products = JSON.parse(localStorage.getItem("products"))
     if (products.length === 0) {
         window.alert(" oups! le pannier est vide !")
@@ -343,8 +358,9 @@ function orderProduct(order) {
                 return res.json();
             }
         })
-
+        //vider le localStorage
         .then(function (value) {
+            //diriger sur la page confirmation en passant l'id dans l'URL
             window.location.href = `./confirmation.html?orderId=${value.orderId}`
             localStorage.clear();
         })
