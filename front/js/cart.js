@@ -247,7 +247,7 @@ city.addEventListener("change", function () {
 });
 
 function validCity(inputCity) {
-    let textRegExp = new RegExp("^([A-Za-zéèàïêç\\- \\s]{1,50}\\s+[0-9]{5}){1,45}$");
+    let textRegExp = new RegExp(/^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]{3,15}$/g);
 
     if (!textRegExp.test(inputCity.value)) {
         document.getElementById("cityErrorMsg").innerText = "Merci de renseigner votre ville et votre code postal. Exemple : « Paris 00000 »";
